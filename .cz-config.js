@@ -30,8 +30,9 @@ module.exports = {
 
   // Add your scopes and packages
   scopes: [
-    { name: 'website' },
+    { name: 'monorepo' },
     { name: 'test-repo' },
+    { name: 'website' },
   ],
 
   // it needs to match the value for field type. Eg.: 'fix'
