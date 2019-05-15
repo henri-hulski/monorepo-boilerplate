@@ -1,0 +1,33 @@
+{
+  "name": "test-repo",
+  "version": "0.0.0",
+  "description": "Test repo for release and travis",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henri-hulski/monorepo-boilerplate.git"
+  },
+  "author": "Henri Hulski <henri@yacoma.it>",
+  "license": "MIT",
+  "private": false,
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "npm run build:lib & npm run build:es",
+    "build:es": "tsc --outDir ../node_modules/test-repo/es --module es2015",
+    "build:lib": "tsc --outDir ../node_modules/test-repo/lib --module commonjs",
+    "clean": "rimraf es lib coverage ../node_modules/test-repo",
+    "prebuild": "npm run clean",
+    "prepare": "rimraf es lib && cp -r ../node_modules/test-repo/es es && cp -r ../node_modules/test-repo/lib lib",
+    "postbuild": "rimraf {lib,es}/**/__tests__ && cp package.json ../node_modules/test-repo",
+    "posttest": "npm run typecheck",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch --updateSnapshot --coverage false",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.5"
+  }
+}
