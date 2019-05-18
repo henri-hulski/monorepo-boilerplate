@@ -26,7 +26,7 @@ script:
     fi
 after_success:
   # Adapt this to your needs.
-  # Set REPO_COOKER_GITHUB_TOKEN to your GitHub access token in the Travis settings of your repo.
+  # Set REPO_COOKER_GITHUB_TOKEN to your GitHub personal access token in the Travis settings of your repo.
   # Set NPM_TOKEN to your npm access token in the Travis settings of your repo.
   # Replace %YourUsername%, %YourMonoRepo% and %YourEmail% with your GitHub values.
   - |
