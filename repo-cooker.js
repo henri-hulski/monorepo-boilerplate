@@ -12,5 +12,7 @@ export const cooker = Cooker(process.argv, {
     host: 'localhost:8787, reconnect: false',
   },
   path: '.',
+
+  // Adapt to your needs. If you use npm scopes add something like 'packages/@yourscope/*'.
   packagesGlobs: ['packages/*', '!packages/node_modules'],
 })
