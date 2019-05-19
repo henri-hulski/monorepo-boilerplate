@@ -5,13 +5,13 @@ Monorepo Boilerplate based on [repo-cooker][1] containing a test repo.
 ## Quick start guide
 
 1. Download and unpack the recent [monorepo boilerplate archive][2].
-2. Initiate the git repo with `git init` and [add the project to your GitHub account][3].
-3. Use the test-repo as blueprint for your packages which must be located under the `packages/` folder.
-4. Remember that the path under `packages/` must be exactly the same as the package name in `package.json`.
+2. Use the test-repo as blueprint for your packages which must be located under the `packages/` folder.
+3. Remember that the path under `packages/` must be exactly the same as the package name in `package.json`.
    So `packages/test-repo/` for the `test-repo` package and `packages/@yourscope/yourrepo/` for `@yourscope/yourrepo`.
-5. Make sure that the `repository` entry in `package.json` of the monorepo is correct.
+4. Make sure that the `repository` entry in `package.json` of the monorepo is correct.
    For The packages you can use the same `repository` entry as for the monorepo.
-6. Adapt `.travis.yml`, `repo-cooker.js` and `.cz-config.js` to your needs. There are comments to help you out.
+5. Adapt `.travis.yml`, `repo-cooker.js` and `.cz-config.js` to your needs. There are comments to help you out.
+6. Initiate the git repo with `git init` and [add the project to your GitHub account][3].
 7. Set `REPO_COOKER_GITHUB_TOKEN` in your Travis repo settings to your GitHub personal access token. Alternatively you
    can use an existing personal access token like `GH_TOKEN` and map it in `repo-cooker.js` to `REPO_COOKER_GITHUB_TOKEN`.
 8. Set `NPM_TOKEN` in your Travis repo settings to your npm access token.
