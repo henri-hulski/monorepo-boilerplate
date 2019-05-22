@@ -24,6 +24,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@types/jest": "24.0.13",
     "@typescript-eslint/eslint-plugin": "^1.7.0",
     "@typescript-eslint/parser": "^1.7.0",
     "commitizen": "^3.1.1",
