@@ -13,6 +13,6 @@ export const cooker = Cooker(process.argv, {
   },
   path: '.',
 
-  // Adapt to your needs. If you use npm scopes add something like 'packages/@yourscope/*'.
+  // Adapt to your needs. If you use npm scopes replace it with ['packages/@yourscope/*'].
   packagesGlobs: ['packages/*', '!packages/node_modules'],
 })
