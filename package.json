@@ -10,13 +10,14 @@
     "commit": "git-cz",
     "commitmsg": "cz-customizable-ghooks",
     "fixdeps": "repo-cooker --fix-dependencies",
-    "format": "npm run lint -- --fix && prettier --write --with-node-modules \"**/*.md\" \"**/*.css\" \"**/*.json\"",
+    "format": "npm run lint -- --fix && prettier --write \"**/*.md\" \"**/*.css\" \"**/*.json\"",
     "install": "npm run link && npm run build",
     "link": "repo-cooker --link",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "precommit": "lint-staged",
     "release": "repo-cooker --release",
-    "test": "repo-cooker test --no-parallel"
+    "test": "repo-cooker test --no-parallel",
+    "typecheck": "repo-cooker typecheck"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "24.0.13",
+    "@types/simple-mock": "0.8.0",
     "@typescript-eslint/eslint-plugin": "^1.7.0",
     "@typescript-eslint/parser": "^1.7.0",
     "commitizen": "^3.1.1",
@@ -45,7 +47,7 @@
     "lint-staged": "^8.1.6",
     "prettier": "1.17.0",
     "repo-cooker": "^6.3.0",
-    "simple-mock": "^0.8.0",
+    "simple-mock": "0.8.0",
     "ts-jest": "24.0.2",
     "typescript": "3.4.5"
   },
