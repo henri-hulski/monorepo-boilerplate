@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henri-hulski/monorepo-boilerplate.git"
+  },
   "scripts": {
     "build": "repo-cooker --build",
     "clean": "repo-cooker clean",
@@ -18,10 +22,6 @@
     "release": "repo-cooker --release",
     "test": "repo-cooker test --no-parallel",
     "typecheck": "repo-cooker typecheck"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/henri-hulski/monorepo-boilerplate.git"
   },
   "dependencies": {},
   "devDependencies": {
